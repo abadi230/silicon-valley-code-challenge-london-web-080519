@@ -89,7 +89,7 @@ We've provided you with a console that you can use to test your code. To enter a
 - `Startup#total_funds`
   - Returns the total sum of investments that the startup has gotten
 - `Startup#investors`
-  - Returns a **unique** array of all the venture capitalists that have invested in this company
+  <!-- - Returns a **unique** array of all the venture capitalists that have invested in this company -->
 - `Startup#big_investors`
   - Returns a **unique** array of all the venture capitalists that have invested in this company and are in the Trés Commas club
 
