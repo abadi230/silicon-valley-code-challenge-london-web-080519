@@ -31,9 +31,6 @@ class Startup
         FundingRound.all.select{|fund| fund.startup == self}
     end
 
-    def tres
-        FundingRound.tres_commas_club.select {|tres| tres.startup == self}
-    end
     def sign_contract(venture_capitalist, investment_type,amount)
         FundingRound.new(self,venture_capitalist,investment_type,amount)
     end
@@ -53,16 +50,9 @@ class Startup
     def big_investors
         # all venture capitalists invested in this instance
         # choose veture capitalists matshes ventrue in tres club
-        venture_capitalists_in_tres_commas_club.each do |tres|
-            investors.select do |investor| 
-                tres.total_worth == investors.total_worth
-            end
-            
-        end
+        investors.select{|investor| VentureCapitalist.tres_commas_club.include?(investor)}
     end
+
     
-    def venture_capitalists_in_tres_commas_club
-        # funding_rounds.map{|fun| fun.venture_capitalists_in_tres_commas_club }
-        funding_rounds.select{|fund| fund.total_worth == fun.venture_capitalists_in_tres_commas_club.total_worth} 
-    end
+    
 end

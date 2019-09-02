@@ -48,6 +48,7 @@ fun_round7 = FundingRound.new(startup7,vencap7,funding.sample, investment)
 fun_round8 = FundingRound.new(startup8,vencap8,funding.sample, investment)
 fun_round9 = FundingRound.new(startup9,vencap9,funding.sample, investment)
 fun_round10 = FundingRound.new(startup10,vencap10,funding.sample, investment)
+fun_round10 = FundingRound.new(startup10,vencap1,funding.sample, investment)
 
 startup1.sign_contract(vencap7,"Angel",1009900000600.99)
 
